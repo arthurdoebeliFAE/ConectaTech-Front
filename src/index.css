@@ -1,0 +1,169 @@
+/* --- TEMA DARK TECH --- */
+:root {
+  --bg-color: #0d1117;       /* Fundo quase preto */
+  --card-bg: #161b22;        /* Fundo dos cartões */
+  --primary: #00ff41;        /* Verde Neon Hacker */
+  --primary-hover: #00cc33;  /* Verde mais escuro */
+  --danger: #ff3333;         /* Vermelho para cancelar */
+  --text-main: #f0f6fc;      /* Texto claro */
+  --text-muted: #8b949e;     /* Texto cinza */
+  --border: #30363d;         /* Bordas sutis */
+}
+
+* {
+  box-sizing: border_box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Inter', 'Segoe UI', sans-serif;
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-main);
+  display: flex;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+/* Container Principal */
+.container {
+  width: 100%;
+  max-width: 800px;
+  padding: 2rem;
+  margin: 0 auto;
+}
+
+h2 {
+  color: var(--primary);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 1.5rem;
+  text-align: center;
+  border-bottom: 2px solid var(--border);
+  padding-bottom: 10px;
+}
+
+/* --- FORMULÁRIO DE LOGIN --- */
+.login-card {
+  background: var(--card-bg);
+  padding: 2rem;
+  border-radius: 12px;
+  border: 1px solid var(--border);
+  box-shadow: 0 0 20px rgba(0, 255, 65, 0.1);
+  text-align: center;
+  max-width: 400px;
+  margin: 100px auto;
+}
+
+input {
+  width: 100%;
+  padding: 12px;
+  margin: 10px 0;
+  background: #000;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  color: var(--primary);
+  font-size: 1rem;
+  outline: none;
+}
+
+input:focus {
+  border-color: var(--primary);
+  box-shadow: 0 0 8px rgba(0, 255, 65, 0.3);
+}
+
+/* --- BOTÕES --- */
+button {
+  width: 100%;
+  padding: 12px;
+  background: var(--primary);
+  color: black;
+  font-weight: bold;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  margin-top: 10px;
+}
+
+button:hover {
+  background: var(--primary-hover);
+  box-shadow: 0 0 15px var(--primary);
+  transform: translateY(-2px);
+}
+
+.btn-danger {
+  background: transparent;
+  border: 1px solid var(--danger);
+  color: var(--danger);
+  width: auto;
+  padding: 5px 15px;
+  font-size: 0.8rem;
+}
+
+.btn-danger:hover {
+  background: var(--danger);
+  color: white;
+  box-shadow: 0 0 10px var(--danger);
+}
+
+/* --- CARDS DE EVENTOS --- */
+.grid-eventos {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.card-evento {
+  background: var(--card-bg);
+  padding: 1.5rem;
+  border-radius: 10px;
+  border: 1px solid var(--border);
+  transition: transform 0.2s;
+}
+
+.card-evento:hover {
+  border-color: var(--primary);
+  transform: translateY(-5px);
+}
+
+.card-evento h3 {
+  color: white;
+  margin-bottom: 0.5rem;
+}
+
+.info {
+  color: var(--text-muted);
+  font-size: 0.9rem;
+  margin-bottom: 5px;
+}
+
+/* --- DASHBOARD --- */
+.lista-inscricoes {
+  list-style: none;
+}
+
+.item-inscricao {
+  background: var(--card-bg);
+  margin-bottom: 10px;
+  padding: 15px;
+  border-radius: 8px;
+  border-left: 4px solid var(--primary);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Links */
+a {
+  color: var(--primary);
+  text-decoration: none;
+  font-size: 0.9rem;
+  margin-top: 10px;
+  display: inline-block;
+}
+
+a:hover {
+  text-decoration: underline;
+}
